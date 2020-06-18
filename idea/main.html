@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style type = "text/css">
+    .three{
+        background-color: white;
+        width:70px;
+        height : 70px;
+    }
+    #t{
+        text-align: center;
+        font-size: 100px;
+    }
+
+    body{
+        text-align:center;
+        background-image: url("../yekong.jpg");
+    }
+    /*.one,.two{*/
+    /*    width:50%;*/
+    /*    float:left;*/
+    /*}*/
+
+    #lala{
+        background-image: url("../next.jpeg");
+        background-size:100%;
+        width:70px;
+        height: 60px;
+    }
+    #hoho{
+        background-image: url("../last.jpeg");
+        background-size:100%;
+        width:70px;
+        height: 60px;
+    }
+    #b{
+        background-image: url("../submit.png");
+        background-size:100%;
+        width:120px;
+        height: 48px;
+    }
+    .pattern{
+        font-family: "宋体";
+        font-size:50px;
+        color:dodgerblue;
+
+    }
+    #span{
+        background-color: white;
+        color: dodgerblue;
+        font-size:20px;
+        height:100px;
+
+    }
+
+
+
+
+
+
+</style>
+<script type = "text/javascript">
+    function clicked() {
+        var id = parseInt(event.target.id)
+        var tis = document.getElementById((id).toString())
+        if (id % 8 == 1 && id <= 49 && id > 1) {
+            var right1 = document.getElementById((id + 1).toString())
+            var up1 = document.getElementById((id - 8).toString())
+            var down1 = document.getElementById((id + 8).toString())
+
+            var buttons1 = [up1,right1,down1,tis]
+            changeColor(buttons1)
+        } else if(id>=2 && id <=7) {
+            var right2 = document.getElementById((id + 1).toString())
+            var left2 = document.getElementById((id - 1).toString())
+            var down2 = document.getElementById((id + 8).toString())
+            var buttons2 = [right2,left2,down2,tis]
+            changeColor(buttons2)
+        } else if (id >=58 && id <=63) {
+            var right3 = document.getElementById((id + 1).toString())
+            var left3 = document.getElementById((id - 1).toString())
+            var up3 = document.getElementById((id - 8).toString())
+            var buttons3 = [right3,left3,up3,tis]
+            changeColor(buttons3)
+        } else if (id % 8 == 0 && id < 64 && id > 8) {
+            var left4 = document.getElementById((id - 1).toString())
+            var up4 = document.getElementById((id + 8).toString())
+            var down4 = document.getElementById((id - 8).toString())
+
+            var buttons4 = [left4,up4,down4,tis]
+            changeColor(buttons4)
+        } else if(id == 1) {
+            var right5 = document.getElementById((2).toString())
+            var down5 = document.getElementById((9).toString())
+            var buttons5 = [right5, down5,tis]
+            changeColor(buttons5)
+        } else if(id == 8) {
+            var left6 = document.getElementById((7).toString())
+            var down6 = document.getElementById((16).toString())
+            var buttons6 = [left6, down6,tis]
+            changeColor(buttons6)
+        } else if(id == 57) {
+            var right7 = document.getElementById((49).toString())
+            var up7 = document.getElementById((58).toString())
+            var buttons7 = [right7, up7,tis]
+            changeColor(buttons7)
+        } else if(id == 64) {
+            var left8 = document.getElementById((63).toString())
+            var up8 = document.getElementById((56).toString())
+            var buttons8 = [left8, up8,tis]
+            changeColor(buttons8)
+        } else {
+            var right9 = document.getElementById((id+1).toString())
+            var down9 = document.getElementById((id+8).toString())
+            var up9 = document.getElementById((id-8).toString())
+            var left9 = document.getElementById((id-1).toString())
+            var buttons9 = [right9, down9,left9,up9,tis]
+            changeColor(buttons9)
+        }
+
+
+
+    }
+    function changeColor(a) {
+        for (var i = 0; i < a.length; i ++){
+            reverse(a[i])
+        }
+    }
+    function reverse(a) {
+        if (a.style.background === "black") {
+            a.style.background = "white"
+        }else {
+            a.style.background = "black"
+        }
+    }
+    function clear() {
+        var buttons = document.getElementsByClassName("three")
+        for (var i = 0; i < buttons.length;i ++) {
+            buttons[i].style.background = "white"
+        }
+    }
+    var count = 0;
+    function haha() {
+        clear()
+        count++
+        image()
+    }
+    function image() {
+        var show = document.getElementById("100")
+        var span = document.getElementById("span")
+        if (count === 0) {
+            show.src = "../1.jpg"
+            span.innerHTML = "1/16"
+        }
+        if (count === 1) {
+            show.src = "../2.jpg"
+            span.innerHTML = "2/16"
+        }
+        if (count === 2) {
+            show.src = "../3.jpg"
+            span.innerHTML = "3/16"
+        }
+        if (count === 3) {
+            show.src = "../4.jpg"
+            span.innerHTML = "4/16"
+        }
+        if (count === 4) {
+            show.src = "../5.jpg"
+            span.innerHTML = "5/16"
+        }
+        if (count === 5) {
+            show.src = "../6.jpg"
+            span.innerHTML = "6/16"
+        }
+        if (count === 6) {
+            show.src = "../7.jpg"
+            span.innerHTML = "7/16"
+        }
+        if (count === 7) {
+            show.src = "../8.jpg"
+            span.innerHTML = "8/16"
+        }
+        if (count === 8) {
+            show.src = "../9.jpg"
+            span.innerHTML = "9/16"
+        }if (count === 9) {
+            show.src = "../10.jpg"
+            span.innerHTML = "10/16"
+        }
+        if (count === 10) {
+            show.src = "../11.jpg"
+            span.innerHTML = "11/16"
+        }
+        if (count === 11) {
+            show.src = "../12.jpg"
+            span.innerHTML = "12/16"
+        }
+        if (count === 12) {
+            show.src = "../13.jpg"
+            span.innerHTML = "13/16"
+        }
+        if (count === 13) {
+            show.src = "../14.jpg"
+            span.innerHTML = "14/16"
+        }
+        if (count === 14) {
+            show.src = "../15.jpg"
+            span.innerHTML = "15/16"
+        }
+        if (count === 15) {
+            show.src = "../boss.jpg"
+            span.innerHTML = "boss关"
+        }
+
+
+    }
+    function xixi() {
+        clear()
+        count--
+        image()
+    }
+
+    function submit() {
+        alert("恭喜完成！")
+        alert("自己看做得对不对！")
+    }
+
+
+
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../realbrain.png" width = 300px />
+<br/>
+<img src="../黑白迭代.png" width = 500px/>
+<br/><br/>
+<div class = "one">
+    <div class = "pattern">题目区</div>
+<image id = "100" src = "../1.jpg" width = "575" height = "575" name = "a" ></image>
+<br/>
+    <button id = "hoho" onclick = "xixi()" target="a"></button>
+    <span id = "span">1/16</span>
+<button id = "lala" onclick = "haha()" target="a"></button>
+</div>
+<div class = "two">
+    <div class = "pattern">作答区</div>
+<button id = "1" class = "three" onclick = "clicked()"></button>
+<button id = "2" class = "three" onclick = "clicked()"></button>
+<button id = "3" class = "three" onclick = "clicked()"></button>
+<button id = "4" class = "three" onclick = "clicked()"></button>
+<button id = "5" class = "three" onclick = "clicked()"></button>
+<button id ="6" class = "three" onclick = "clicked()"></button>
+<button id = "7" class = "three" onclick = "clicked()"></button>
+<button id = "8" class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "9" class = "three" onclick = "clicked()"></button>
+<button id = "10" class = "three" onclick = "clicked()"></button>
+<button id = "11" class = "three" onclick = "clicked()"></button>
+<button id = "12" class = "three" onclick = "clicked()"></button>
+<button id = "13" class = "three" onclick = "clicked()"></button>
+<button id ="14" class = "three" onclick = "clicked()"></button>
+<button id = "15" class = "three" onclick = "clicked()"></button>
+<button id = "16" class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "17" class = "three" onclick = "clicked()"></button>
+<button id = "18" class = "three" onclick = "clicked()"></button>
+<button id = "19" class = "three" onclick = "clicked()"></button>
+<button id = "20" class = "three" onclick = "clicked()"></button>
+<button id = "21" class = "three" onclick = "clicked()"></button>
+<button id ="22" class = "three" onclick = "clicked()"></button>
+<button id = "23" class = "three" onclick = "clicked()"></button>
+<button id = "24" class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "25"class = "three" onclick = "clicked()"></button>
+<button id = "26"class = "three" onclick = "clicked()"></button>
+<button id = "27" class = "three" onclick = "clicked()"></button>
+<button id = "28" class = "three" onclick = "clicked()"></button>
+<button id = "29" class = "three" onclick = "clicked()"></button>
+<button id ="30" class = "three" onclick = "clicked()"></button>
+<button id = "31" class = "three" onclick = "clicked()"></button>
+<button id = "32" class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "33" class = "three" onclick = "clicked()"></button>
+<button id = "34" class = "three" onclick = "clicked()"></button>
+<button id = "35" class = "three" onclick = "clicked()"></button>
+<button id = "36" class = "three" onclick = "clicked()"></button>
+<button id = "37" class = "three" onclick = "clicked()"></button>
+<button id ="38" class = "three" onclick = "clicked()"></button>
+<button id = "39" class = "three" onclick = "clicked()"></button>
+<button id = "40" class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "41" class = "three" onclick = "clicked()"></button>
+<button id = "42" class = "three" onclick = "clicked()"></button>
+<button id = "43" class = "three" onclick = "clicked()"></button>
+<button id = "44"class = "three" onclick = "clicked()"></button>
+<button id = "45" class = "three" onclick = "clicked()"></button>
+<button id ="46" class = "three" onclick = "clicked()"></button>
+<button id = "47" class = "three" onclick = "clicked()"></button>
+<button id = "48" class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "49"class = "three" onclick = "clicked()"></button>
+<button id = "50"class = "three" onclick = "clicked()"></button>
+<button id = "51"class = "three" onclick = "clicked()"></button>
+<button id = "52"class = "three" onclick = "clicked()"></button>
+<button id = "53"class = "three" onclick = "clicked()"></button>
+<button id ="54"class = "three" onclick = "clicked()"></button>
+<button id = "55"class = "three" onclick = "clicked()"></button>
+<button id = "56"class = "three" onclick = "clicked()"></button>
+<br/>
+<button id = "57"class = "three" onclick = "clicked()"></button>
+<button id = "58"class = "three" onclick = "clicked()"></button>
+<button id = "59"class = "three" onclick = "clicked()"></button>
+<button id = "60"class = "three" onclick = "clicked()"></button>
+<button id = "61"class = "three" onclick = "clicked()"></button>
+<button id ="62"class = "three" onclick = "clicked()"></button>
+<button id = "63"class = "three" onclick = "clicked()"></button>
+<button id = "64"class = "three" onclick = "clicked()"></button>
+<br/>
+</div>
+<button id = "b" onclick = "submit()"></button>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</body>
+</html>
